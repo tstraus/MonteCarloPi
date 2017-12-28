@@ -1,21 +1,15 @@
 package main
 
 import (
-	"sync"
 	"math/rand"
-	"time"
+	"os"
 	"runtime"
 	"strconv"
-	"os"
+	"sync"
+	"time"
+
 	"github.com/fatih/color"
 )
-
-type Result struct {
-	pi float64
-	reps int
-	cores int
-	runtime string
-}
 
 func main() {
 	cores := runtime.NumCPU()
@@ -29,7 +23,7 @@ func main() {
 	wait.Add(cores)
 
 	for i := 0; i < cores; i++ {
-		go monteCarloPi(samples / cores, &counts[i], &wait)
+		go monteCarloPi(samples/cores, &counts[i], &wait)
 	}
 
 	wait.Wait()
@@ -58,7 +52,7 @@ func monteCarloPi(reps int, result *int, wait *sync.WaitGroup) {
 		x = random.Float64()
 		y = random.Float64()
 
-		if x*x + y*y < 1.0 {
+		if x*x+y*y < 1.0 {
 			count++
 		}
 	}

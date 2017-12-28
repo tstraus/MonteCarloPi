@@ -8,7 +8,7 @@
 
 using namespace std;
 
-bool monteCarloPi(double x, double y)
+bool inUnitCircle(double x, double y)
 {
     if (x*x + y*y < 1.0)
         return true;
@@ -16,7 +16,7 @@ bool monteCarloPi(double x, double y)
     else return false;
 }
 
-long int piThread(long int reps)
+long int monteCarloPi(long int reps)
 {
     long int count = 0;
 
@@ -26,7 +26,7 @@ long int piThread(long int reps)
 
     for (long int i = 0; i < reps; i++)
     {
-        if (monteCarloPi(rand(engine), rand(engine)))
+        if (inUnitCircle(rand(engine), rand(engine)))
             count++;
     }
 
@@ -50,7 +50,7 @@ int main (int argc, char** argv)
     auto start = chrono::steady_clock::now();
 
     for (unsigned i = 0; i < cores; i++)
-        results.push_back(async(launch::async, piThread, samples/cores));
+        results.push_back(async(launch::async, monteCarloPi, samples/cores));
 
     long int total = 0;
     for (auto& result: results)

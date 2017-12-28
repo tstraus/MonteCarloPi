@@ -18,7 +18,7 @@ namespace MonteCarloPiSharp
             var threads = new List<Task<ulong>>();
             for (ulong i = 0; i < cores; i++)
             {
-                var task = new Task<ulong>(() => PiLoop(reps / cores));
+                var task = new Task<ulong>(() => MonteCarloPi(reps / cores));
                 task.Start();
                 threads.Add(task);
             }
@@ -39,21 +39,21 @@ namespace MonteCarloPiSharp
             return 0;
         }
 
-        private static ulong PiLoop(ulong reps)
+        private static ulong MonteCarloPi(ulong reps)
         {
             var random = new Random();
 
             ulong count = 0;
 			for (ulong i = 0; i < reps; i++)
 			{
-				if (MonteCarloPi(random.NextDouble(), random.NextDouble()))
+				if (InUnitCircle(random.NextDouble(), random.NextDouble()))
                     count++;
 			}
 
             return count;
         }
 
-        private static bool MonteCarloPi(double x, double y)
+        private static bool InUnitCircle(double x, double y)
         {
             if (x * x + y * y <= 1.0)
                 return true;
