@@ -1,0 +1,13 @@
+[package]
+name = "monteCarloPi"
+version = "0.1.0"
+authors = ["Tucker Strausbaugh <tckrsstrsbgh@gmail.com>"]
+
+[[bin]]
+name = "monte_carlo_pi"
+
+[dependencies]
+rand = "*"
+num_cpus = "*"
+futures = "*"
+futures-cpupool = "*"
