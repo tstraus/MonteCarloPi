@@ -5,6 +5,7 @@ authors = ["Tucker Strausbaugh <tckrsstrsbgh@gmail.com>"]
 
 [[bin]]
 name = "monte_carlo_pi"
+path = "src/monte_carlo_pi.rs"
 
 [dependencies]
 rand = "*"
