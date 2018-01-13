@@ -67,5 +67,4 @@ fn in_unit_circle_test() {
     assert_eq!(in_unit_circle(1.0, 0.1), false);
     assert_eq!(in_unit_circle(0.1, 1.0), false);
     assert_eq!(in_unit_circle(1.0, 1.0), false);
-
 }
