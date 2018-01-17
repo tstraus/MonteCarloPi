@@ -1,0 +1,27 @@
+{
+    "name": "MonteCarloPi",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "run": "node pi.js 1000000",
+      "test": "standard --fix --verbose | snazzy"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/tstraus/MonteCarloPi.git"
+    },
+    "author": "Tucker Strausbaugh",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/tstraus/MonteCarloPi/issues"
+    },
+    "homepage": "https://github.com/tstraus/MonteCarloPi#readme",
+    "devDependencies": {
+      "snazzy": "^7.0.0",
+      "standard": "^10.0.2"
+    },
+    "dependencies": {
+    }
+  }
+  
