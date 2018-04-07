@@ -5,8 +5,6 @@ project(MonteCarloPi)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_LEGACY_CYGWIN_WIN32 0)
 
-find_package(Threads)
-
 add_subdirectory(pybind11)
 
 include_directories(
