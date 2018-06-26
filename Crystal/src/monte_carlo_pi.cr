@@ -1,5 +1,3 @@
-require "./monte_carlo_pi/*"
-
 # to run: crystal run src/monte_carlo_pi.cr -- 1000000
 # to build: crystal build src/monte_carlo_pi.cr --release
 
