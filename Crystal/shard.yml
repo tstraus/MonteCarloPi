@@ -1,0 +1,13 @@
+name: monte_carlo_pi
+version: 0.1.0
+
+authors:
+  - Tucker Strausbaugh <strausbaugh.tucker@gmail.com>
+
+targets:
+  monte_carlo_pi:
+    main: src/monte_carlo_pi.cr
+
+crystal: 0.24.2
+
+license: MIT
