@@ -10,6 +10,5 @@ program
 
 let reps = parseInt(program.reps)
 
-console.log(reps)
-
-console.log(chalk.yellow('pi: ') + chalk.green(addon.pi(reps)));
+console.log(chalk.blue('reps: ') + reps)
+console.log(chalk.yellow('pi: ') + chalk.green(addon.pi(reps)))
