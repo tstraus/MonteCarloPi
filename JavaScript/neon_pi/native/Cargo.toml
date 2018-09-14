@@ -1,5 +1,5 @@
 [package]
-name = "neon_test"
+name = "neon_pi"
 version = "0.1.0"
 authors = ["tuckerstrausbaugh"]
 license = "MIT"
@@ -7,7 +7,7 @@ build = "build.rs"
 exclude = ["artifacts.json", "index.node"]
 
 [lib]
-name = "neon_test"
+name = "neon_pi"
 crate-type = ["dylib"]
 
 [build-dependencies]
