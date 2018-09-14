@@ -1,0 +1,21 @@
+{
+  "name": "neon_pi",
+  "version": "0.1.0",
+  "description": "Monte Carlo estimate of pi using typescript and rust",
+  "main": "build/index.js",
+  "author": "tuckerstrausbaugh",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.18.0",
+    "neon-cli": "^0.2.0",
+    "typescript": "^3.0.3"
+  },
+  "scripts": {
+    "install": "tsc && neon build --release",
+    "start": "node ."
+  },
+  "devDependencies": {
+    "@types/node": "^10.9.4"
+  }
+}
