@@ -8,10 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
-    "commander": "^2.18.0",
-    "neon-cli": "^0.2.0",
-    "pkg": "^4.3.4",
-    "typescript": "^3.0.3"
+    "commander": "^2.18.0"
   },
   "pkg": {
     "scripts": "build/**/*.js"
@@ -19,9 +16,14 @@
   "scripts": {
     "install": "./node_modules/.bin/tsc && ./node_modules/.bin/neon build --release",
     "start": "node .",
-    "pkg": "./node_modules/.bin/pkg . --out-path dist"
+    "pkg": "pkg . --out-path dist && copyfiles native/index.node dist",
+    "test": "cd native && cargo test --release"
   },
   "devDependencies": {
-    "@types/node": "^10.9.4"
+    "@types/node": "^10.9.4",
+    "copyfiles": "^2.1.0",
+    "neon-cli": "^0.2.0",
+    "pkg": "^4.3.4",
+    "typescript": "^3.0.3"
   }
 }
