@@ -63,3 +63,16 @@ fn monte_carlo_pi(reps: u64) -> u64 {
 register_module!(mut cx, {
     cx.export_function("pi", pi)
 });
+
+#[cfg(test)]
+#[test]
+fn in_unit_circle_test() {
+    assert_eq!(in_unit_circle(0.0, 0.0), true);
+    assert_eq!(in_unit_circle(0.5, 0.5), true);
+    assert_eq!(in_unit_circle(1.0, 0.0), true);
+    assert_eq!(in_unit_circle(0.0, 1.0), true);
+    assert_eq!(in_unit_circle(1.0, 0.1), false);
+    assert_eq!(in_unit_circle(0.1, 1.0), false);
+    assert_eq!(in_unit_circle(1.0, 1.0), false);
+
+}
