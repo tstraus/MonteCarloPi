@@ -19,7 +19,7 @@
   "scripts": {
     "install": "./node_modules/.bin/tsc && ./node_modules/.bin/neon build --release",
     "start": "node .",
-    "pkg": "./node_modules/.bin/pkg ."
+    "pkg": "./node_modules/.bin/pkg . --out-path dist"
   },
   "devDependencies": {
     "@types/node": "^10.9.4"
